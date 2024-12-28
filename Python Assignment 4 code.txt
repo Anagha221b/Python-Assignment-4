@@ -1,0 +1,60 @@
+Python-Functions
+
+1. What does the len() function do in Python? Write a code example using len() to find the length of a list.
+
+Solution:
+	# using len() to find the length of a list.
+	my_list=[1,2,3,4,5,6,7,8,9]
+	length_of_list=len(my_list)
+	print(f"The length of the list is: {length_of_list}")
+
+
+2. Write a Python function greet(name) that takes a person's name as input and prints "Hello, [name]!".
+
+Solution:
+	#Function greet() to take name as input and print greeting with input name.
+	def greet(name):
+	    print(f"Hello, {name}!")
+	greet(input("Enter your name: "))
+
+
+3. Write a Python function find_maximum(numbers) that takes a list of integers and returns the maximum value without using the built-in max() function. Use a loop to iterate through the list and compare values.
+
+Solution:
+	# This function returns the maximum numbers in the list using loop iterations
+	def find_maximum(numbers):
+	    max_num=-1
+	    for i in numbers:
+	        if i>max_num:
+	            max_num=i
+	    return max_num
+
+	numbers=[34,23,12,66,34,45,67]
+	print(f"The maximum number in the list is: {find_maximum(numbers)}")
+        
+
+4. Explain the difference between local and global variables in a Python function. Write a program where a global variable and a local variable have the same name and show how Python differentiates between them.
+
+Solution:
+	#Demonstration of local and global variable
+	var="I am global variable" #global variable
+
+	def local_scope():
+	    var="I am local variable" #local variable
+	    print(var)
+	
+	local_scope()
+	print(var)
+
+
+5. Create a function calculate_area(length, width=5) that calculates the area of a rectangle. If only the length is provided, the function should assume the width is 5. Show how the function behaves when called with and without the width argument.
+
+Solution:
+	#This function will return the area of a rectangle with and without width arguments.
+	def calculate_area(length, width=5):
+	    area_of_rectangle=length*width
+	    return area_of_rectangle
+	length=float(input("Enter the length of the rectangle: "))
+	print(f"Area of rectangle without width argument: {calculate_area(length)}")
+	print(f"Area of rectangle with width argument: {calculate_area(length,8)}")
+
